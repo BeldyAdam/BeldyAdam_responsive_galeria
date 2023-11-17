@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 5px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "h h h h"
+                         "n n n n"
+                         "a a a a"
+                         "s s s s"
+                         "f f f f";
+    gap: 10px;
+}
+
+header, nav, aside, article, footer{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+#piros{
+    background-color: red;
+}
+
+nav ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr 0fr;
+}
+
+
+nav ul li a{
+    border: 1px solid black;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+#piros:hover{
+    background-color: blue;
+}
+
+nav ul li a:hover{
+    background-color: blue;
+}
+
+header{
+    grid-area: h;
+}
+
+nav{
+    grid-area: n;
+    background-color: rgb(180, 180, 180);
+}
+
+article{
+    grid-area: a;
+}
+
+footer{
+    grid-area: f;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+section{
+    grid-area: s;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 15px;
+}
+
+article h2{
+    margin-top: 15px;
+}
+
+section img{
+    border: 1px solid black;
+    width: 100%;
+    padding: 2px;
+}
+
+section .div1{
+    margin: 5px;
+}
+
+.nagykep{
+    max-width: 900px;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border: 1px solid black;
+}
+
+
+@media screen and (max-width: 450px) {
+    body {
+      background-color: rgb(177, 144, 238);
+      width: 100%;
+      font-size: 5vw;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-areas: "h"
+                             "n"
+                             "a" 
+                             "s"
+                             "f";
+    }
+    nav ul{
+        grid-template-columns: 1fr;
+    }
+    section{
+        grid-template-columns: 1fr;
+        margin: auto;
+        
+    }
+    section img{
+        max-width: 100%;
+    }
+  }
